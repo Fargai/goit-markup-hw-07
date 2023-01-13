@@ -368,9 +368,9 @@ img {
     background-color: var(--dark-color);
     text-align: center;
 }
-@media screen and (min-device-pixel-ratio: 2),
-screen and (min-resolution: 192dpi),
-screen and (min-resolution: 2dppx) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (max-width: 767px) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/mobile-hero@2x.jpg);
     }
@@ -478,43 +478,71 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
 }
 
 /* Marking Features */
-.feature-box-icon {
-    display: none;
-}
-/* Marking Features */
-/* .section-feature {
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
-.feature {
-    display: flex;
-    gap: 0 24px;
+.section-feature {
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
-.feature-item {
-    flex-basis: calc((100% - 72px) / 4);
+.feature {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 0;
 }
 
 .future-page {
     margin-bottom: 8px;
 
     color: var(--dark-color);
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
 }
-.feature-box-icon {
-    padding: 24px 100px;
-    margin-bottom: 8px;
-    width: 264px;
-    height: 112px;
-    border-radius: 4px;
-    background-color: #F4F4FD;
+@media screen and (max-width: 1199px) {
+    .feature-box-icon {
+        display: none;
+    }
 }
-.feature-icon {
-    fill: var(--light-color);
+@media screen and (min-width: 768px) {
+    .feature {
+        row-gap: 72px;
+        column-gap: 24px;
+    }
+    .feature-item {
+        flex-basis: calc((100% - 24px) / 2);
+    }
 }
- */
+@media screen and (min-width: 1200px) {
+    .section-feature {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    .feature {
+        gap: 0 24px;
+    }
+    .feature-item {
+        flex-basis: calc((100% - 72px) / 4);
+    }
+    .future-page {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .feature-box-icon {
+        padding: 24px 100px;
+        margin-bottom: 8px;
+        width: 264px;
+        height: 112px;
+        border-radius: 4px;
+        background-color: #F4F4FD;
+    }
+
+    .feature-icon {
+        fill: var(--light-color);
+    }
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -529,7 +557,12 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
 }
 
 /* Marking Wot We Do */
-/* .section-doing {
+@media screen and (max-width: 1199px) {
+    .section-doing {
+        display: none;
+    }
+}
+.section-doing {
     padding-bottom: 120px;
 }
 .section-page {
@@ -542,15 +575,79 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     text-align: center;
     text-transform: capitalize;
 }
-
 .work {
     display: flex;
+    gap: 24px;
 }
 
-.work .item:not(:last-child) {
-    margin-right: 24px;
-} */
+/* Markinf Our Team */
+.item-foto {
+    box-shadow:
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--withe-color);
+    /* text-align: center;
+    align-items: center; */
+}
 
+.our-team {
+    padding-top: 96px;
+    padding-bottom: 128px;
+    
+    /* margin-left: auto;
+    margin-right: auto; */
+
+    background-color: var(--light-color);
+    /* text-align: center; */
+}
+
+.team-content {
+    padding: 32px 16px;
+}
+
+.team-page {
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.team-text {
+    text-align: center;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 0px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-brend-color);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: #404BBF;
+}
+
+.social-icon {
+    fill: var(--light-color);
+}
 /* Markinf Our Team */
 
 /* .team {
