@@ -947,7 +947,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     margin-bottom: 48px;
 }
 /* @media screen and (max-width: 767px) {
-    .item {
+    .btn-item {
         flex-basis: calc((100% - 2 * 24px) / 3);
     }
 } */
@@ -988,8 +988,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
 .cards {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -24px;
-    margin-bottom: -48px;
+    justify-content: center;
 }
 
 .cards .link {
@@ -997,14 +996,17 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     color: inherit;
 }
 
-.cards .item {
+.cards .item-card {
     margin-bottom: 48px;
     border: 0.5px solid var(--light-color);
+    
 }
 
 .card-thumb {
     position: relative;
     overflow: hidden;
+    max-width: 396px;
+    max-height: 280px;
 }
 
 .text-thumb {
@@ -1047,7 +1049,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
 
 }
 
-.cards .item {
+.cards .item-card {
     border: 0.5px solid var(--light-color);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1065,7 +1067,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
         0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 @media screen and (min-width: 768px) {
-    .cards .item {
+    .cards .item-card {
         margin-right: 24px;
         flex-basis: calc(100% / 2 - 24px);
     }
@@ -1080,7 +1082,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     }
 }
 @media screen and (min-width: 1200px) {
-    .cards .item {
+    .cards .item-card {
         flex-basis: calc(100% / 3 - 24px);
     }
     .section-main {
